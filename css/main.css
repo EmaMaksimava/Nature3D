@@ -5,18 +5,46 @@
 }
 
 @font-face {
-  font-family: 'kamerik';
+  font-family: kamerik;
   src: url('../fonts/kamerik205-heavy.woff2');
 
 }
 
 @font-face {
-  font-family: 'merriweatherR';
+  font-family: merriweatherR;
   src: url('../fonts/merriweather-regular-italic.woff2');
 
 }
 
 body {
   font-family: kamerik;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
+}
+
+.logo {
+  width: 200px;
+  height: 170px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.layers {
+  perspective: 1000px;
+}
+
+.layers__container {
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.layers__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
 }
