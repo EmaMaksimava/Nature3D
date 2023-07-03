@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'kamerik';
+  src: url('../fonts/kamerik205-heavy.woff2');
+
+}
+
+@font-face {
+  font-family: 'merriweatherR';
+  src: url('../fonts/merriweather-regular-italic.woff2');
+
+}
+
+body {
+  font-family: kamerik;
+}
