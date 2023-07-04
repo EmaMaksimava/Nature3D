@@ -115,8 +115,6 @@ body {
   padding: 15px;
   width: calc(var(--index) * 8);
   height: calc(var(--index) * 2.5);
-  font-size: calc(var(--index) * .8);
-  color: #fff;
   background-color: #00000037;
   border: #fff 2px solid ;
   border-radius: 10em;
@@ -126,5 +124,24 @@ body {
 }
 
 .button-start:hover {
-  background-color: #00000097;
+  background-color: #000000e9;
+}
+
+.button-start a {
+  text-decoration: none;
+  font-size: calc(var(--index) * .8);
+  color: #fff;
+}
+
+.layer-4, .layer-5, .layer-6 {
+  pointer-events: none;
+}
+
+.creating {
+  font-size: calc(var(--index) * .6);
+  color: rgb(243, 252, 145);
+  position: absolute;
+  z-index: 5;
+  bottom: 2%;
+  left:2%
 }
