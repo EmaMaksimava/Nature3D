@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --index: calc(1vw + 1vh);
+}
+
 @font-face {
   font-family: kamerik;
   src: url('../fonts/kamerik205-heavy.woff2');
@@ -23,11 +27,21 @@ body {
 }
 
 .logo {
-  width: 200px;
-  height: 170px;
+  width: calc(var(--index) * 9);
+  height: calc(var(--index) * 9);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  z-index: 5;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.logo:hover {
+  filter: invert(90%);
 }
 
 .layers {
@@ -47,7 +61,9 @@ body {
   inset: -5vw;
   background-size: cover;
   background-position: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .layer-1 {
