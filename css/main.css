@@ -6,6 +6,7 @@
 
 :root {
   --index: calc(1vw + 1vh);
+  --transition: 1s cubic-bezier(0.05, 0.5, 0, 1);
 }
 
 @font-face {
@@ -33,7 +34,7 @@ body {
   background-repeat: no-repeat;
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 10%;
   transform: translateX(-50%);
   z-index: 5;
   cursor: pointer;
@@ -53,6 +54,7 @@ body {
   height: 100vh;
   transform-style: preserve-3d;
   transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  transition: transform var(--transition);
   will-change: transform;
 }
 
@@ -88,4 +90,41 @@ body {
 
 .layer-6 {
   transform: translateZ(380px) scale(.80);
+}
+
+.hero-content {
+  text-align: center;
+  font-family: merriweatherR;
+}
+
+.hero-content h1 {
+  font-family: kamerik;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  font-size: calc(var(--index) * 3);
+}
+
+.hero-content__p {
+  font-size: calc(var(--index) * 1.1);
+  line-height: 1.5;
+  color: #f4fada;
+}
+
+.button-start {
+  margin-top: 15px;
+  padding: 15px;
+  width: calc(var(--index) * 8);
+  height: calc(var(--index) * 2.5);
+  font-size: calc(var(--index) * .8);
+  color: #fff;
+  background-color: #00000037;
+  border: #fff 2px solid ;
+  border-radius: 10em;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  outline: none;
+}
+
+.button-start:hover {
+  background-color: #00000097;
 }
